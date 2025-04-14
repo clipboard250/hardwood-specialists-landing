@@ -1,80 +1,154 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #1e1e1e;
-  color: #eee;
+  background-color: #fdfaf4;
+  color: #222;
 }
 
-a { color: #f8cd6b; text-decoration: none; }
-a:hover { text-decoration: underline; }
+a {
+  color: #7d5a1f;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-.hero.wood-hero {
-  background-image: url("images/wood-grain-samples.jpg");
-  background-size: cover;
-  background-position: center;
+/* Hero */
+.hero {
+  background: url('images/wood-grain-samples.jpg') center/cover no-repeat;
   height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  color: #fff;
   position: relative;
 }
 
-.overlay {
-  background: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
 }
 
-.hero-text h1 {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   margin: 0;
-  color: #fff;
 }
 
-.hero-text .subhead {
+.hero-subtitle {
+  font-size: 1.25rem;
   margin-top: 0.5rem;
-  font-size: 1rem;
-  color: #f8cd6b;
 }
 
-.hero-text .license {
-  font-size: 0.8rem;
-  color: #ccc;
-  margin-top: 0.25rem;
+.license-info {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: #eee;
 }
 
-.intro, .services-alt, .gallery, .materials, .contact {
-  padding: 3rem 1rem;
-  max-width: 900px;
+/* Sections */
+section {
+  padding: 3rem 1.5rem;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 h2 {
   font-family: 'Poppins', sans-serif;
-  color: #f8cd6b;
+  font-size: 1.75rem;
+  color: #7d5a1f;
+  margin-bottom: 1rem;
 }
 
-.services-alt .service-item {
-  margin: 1rem 0;
+/* Services */
+.services .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  color: #2c2c2c;
+}
+
+.service-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* Gallery */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Materials */
+.materials ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.materials li {
+  margin: 0.5rem 0;
   font-size: 1rem;
-  line-height: 1.5;
 }
 
-.services-alt .icon {
-  font-size: 1.2rem;
-  margin-right: 0.5rem;
+/* Contact */
+.contact p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
+/* Footer */
 footer {
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.85rem;
-  background: #111;
-  color: #aaa;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  background: #e8e1d4;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .service-card {
+    padding: 1rem;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
 }
 
