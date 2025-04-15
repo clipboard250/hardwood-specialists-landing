@@ -221,4 +221,20 @@ body {
   color: #444;
   margin-top: 0.25rem;
 }
+.hero-btn {
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #7d5a1f;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #5f4317;
+}
 
