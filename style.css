@@ -196,4 +196,8 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* Prevent horizontal bleed on mobile */
+html, body {
+  overflow-x: hidden;
+}
 
