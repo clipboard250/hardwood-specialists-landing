@@ -1,230 +1,176 @@
-/* GLOBAL STYLES */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background-color: #fdfaf4;
+  background-color: #fdf8ef;
   color: #222;
 }
-
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
 a {
-  color: #7d5a1f;
+  color: #d4a017;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: underline;
 }
 
-/* HERO */
+/* Hero */
 .hero {
   background: url('images/wood-grain-samples.jpg') center/cover no-repeat;
-  height: 60vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
   text-align: center;
-  color: #fff;
   position: relative;
+  color: #fff;
 }
-
-.hero::after {
-  content: "";
+.hero::before {
+  content: '';
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   z-index: 1;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
+  padding: 1rem;
 }
-
 .hero-title {
-  font-family: 'Montserrat', sans-serif;
   font-size: 2.5rem;
-  margin: 0;
+  margin: 0 0 1rem;
 }
-
 .hero-subtitle {
-  font-size: 1.25rem;
-  margin-top: 0.5rem;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
 }
-
-.license-info {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  color: #eee;
-}
-
 .hero-btn {
-  margin-top: 1.5rem;
   display: inline-block;
+  padding: 0.75rem 1.5rem;
   background-color: #d4a017;
-  color: #fff;
-  padding: 0.75rem 1.25rem;
+  color: white;
   font-weight: 600;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
 }
-
 .hero-btn:hover {
-  background-color: #b8860b;
+  transform: scale(1.05);
+}
+.license-stamp {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #fff;
+  background-color: #d4a017;
+  padding: 0.5rem 1rem;
 }
 
-/* SECTIONS */
-section {
-  padding: 3rem 1.5rem;
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.75rem;
-  color: #7d5a1f;
-  margin-bottom: 1.25rem;
-}
-
-/* CARD LAYOUT */
+/* Card section */
 .card {
-  background: #f5f3ee;
+  background: #fff;
+  margin: 2rem auto;
   padding: 2rem;
+  max-width: 960px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 3rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.card h2 {
+  font-size: 1.5rem;
+  color: #5e420d;
+}
+.footer-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
 }
 
-/* SERVICES */
+/* Services */
 .service-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1rem;
-}
-
-.service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.25rem;
-  font-family: 'Montserrat', sans-serif;
-}
-
-/* GALLERY */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 1rem;
   margin-top: 1.5rem;
 }
+.service-card {
+  background: #f8f3e8;
+  padding: 1rem;
+  border-radius: 8px;
+}
 
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
 .gallery-item {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
 }
-
 .gallery-item img {
   width: 100%;
-  height: auto;
-  object-fit: cover;
   display: block;
+  object-fit: cover;
   transition: transform 0.3s ease;
 }
-
+.gallery-item span {
+  display: block;
+  padding: 0.5rem 0;
+  text-align: center;
+  font-weight: 500;
+}
 .gallery-item:hover img {
   transform: scale(1.05);
 }
 
-.img-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  font-size: 0.9rem;
-  padding: 0.5rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover .img-label {
-  opacity: 1;
-}
-
-/* TESTIMONIALS */
+/* Testimonials */
 .testimonial-grid {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr;
 }
-
 .testimonial-card {
-  background: #fff;
-  padding: 1rem;
+  background: #fefefe;
+  padding: 1.25rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-left: 4px solid #d4a017;
 }
-
-.stars {
-  font-size: 1.2rem;
+.testimonial-card .stars {
   color: #d4a017;
-  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
 }
-
 .testimonial-card footer {
-  margin-top: 1rem;
-  padding: 0.5rem;
+  font-size: 0.875rem;
   font-style: italic;
-  background-color: #e9e4d9;
-  border-radius: 4px;
-  text-align: center;
+  text-align: right;
+  margin-top: 1rem;
+  color: #444;
 }
 
 /* CTA */
 .cta {
-  background-color: #f9f2e9;
-}
-
-.cta a {
-  color: #d4a017;
-  font-weight: 600;
-}
-
-/* BRANDS */
-.brand-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.brand-card {
-  padding: 1rem;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   text-align: center;
-  font-size: 0.95rem;
+}
+.cta a {
+  font-weight: bold;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   text-align: center;
-  font-size: 0.85rem;
-  background: #f5f3ee;
   padding: 2rem;
-  color: #333;
+  font-size: 0.875rem;
+  color: #888;
 }
 
-/* MOBILE TWEAKS */
-@media (min-width: 700px) {
+/* Responsive */
+@media (min-width: 768px) {
   .testimonial-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
