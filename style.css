@@ -99,29 +99,41 @@ a:hover {
 /* Gallery */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
   margin-top: 1rem;
 }
+
 .gallery-item {
-  position: relative;
   overflow: hidden;
-  border-radius: 8px;
-}
-.gallery-item img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
+  position: relative;
   transition: transform 0.3s ease;
 }
-.gallery-item span {
-  display: block;
-  padding: 0.5rem 0;
-  text-align: center;
-  font-weight: 500;
+
+.gallery-item:hover {
+  transform: scale(1.03);
 }
-.gallery-item:hover img {
-  transform: scale(1.05);
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.img-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 0.3rem 0;
+  font-family: 'Inter', sans-serif;
 }
 
 /* Testimonials */
