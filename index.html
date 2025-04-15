@@ -74,6 +74,10 @@
       <li><a href="https://www.grafch.com" target="_blank">Grafch</a></li>
     </ul>
   </section>
+<section id="reviews">
+  <h2>What Our Clients Say</h2>
+  <div id="review-blocks"></div>
+</section>
 
   <section class="card">
     <h2>Let’s Talk</h2>
@@ -87,6 +91,23 @@
   <footer>
     <p>&copy; 2025 Hardwood Specialists. Designed with integrity. Built to last.</p>
   </footer>
+<script>
+fetch('data/reviews.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('review-blocks');
+    data.forEach(r => {
+      const block = document.createElement('blockquote');
+      block.classList.add('card');
+      block.innerHTML = `
+        <p>"${r.review}"</p>
+        <footer>— ${r.name}</footer>
+      `;
+      container.appendChild(block);
+    });
+  });
+</script>
+
 </body>
 </html>
 
