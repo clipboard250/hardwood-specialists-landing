@@ -139,6 +139,12 @@ a:hover {
   .gallery-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+/* Keep the gallery content from bleeding off the screen */
+#gallery {
+  max-width: 1200px;  /* or whatever width suits your design */
+  margin: 0 auto;     /* center horizontally */
+  padding: 0 1rem;    /* add a little side padding so images don’t hug the edge */
+}
 }
 
 /* Testimonials */
