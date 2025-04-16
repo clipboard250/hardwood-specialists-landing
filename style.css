@@ -24,8 +24,10 @@ h1, h2 {
 }
 h2 {
   text-align: center;
-  color: #F5F5F5;       /* bright off-white for readability */
+  color: #FFFFFF;    /* bright white for high contrast */
   margin: 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
 }
 
 a {
@@ -86,10 +88,15 @@ background-color: #748C69;  /* Updated to moss green */
 }
 .license-stamp {
   text-align: center;
-  font-size: 0.875rem;
-  color: #fff;
-background-color: #748C69;  /* Updated to moss green */
-  padding: 0.5rem 1rem;
+  font-size: 1rem;        /* a bit larger */
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #748C69;  /* moss green accent */
+  padding: 0.75rem 1rem;
+  margin: 1rem auto;
+  max-width: 300px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
 }
 
 .card {
@@ -152,6 +159,15 @@ background-color: #748C69;  /* Updated to moss green */
   object-fit: cover;
   display: block;
 }
+/* Center the gallery labels */
+.gallery-item span,
+.img-label {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: #FFFFFF;
+}
 
 .img-label {
   position: absolute;
@@ -200,10 +216,10 @@ text-align: center;
 }
 .testimonial-card footer {
   font-size: 0.875rem;
-  font-style: italic;
-  text-align: right;
-  margin-top: 1rem;
-  color: #444;
+  font-weight: bold;
+  font-style: normal;      /* remove italics if they feel odd */
+  text-align: center;      /* center aligns the names */
+  color: #FFFFFF;
 }
 
 /* CTA */
