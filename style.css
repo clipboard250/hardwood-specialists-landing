@@ -112,11 +112,12 @@ background-color: #748C69;  /* Updated to moss green */
   margin-top: 1.5rem;
 }
 .service-card {
-  background: #4D3E3E; /* dark warm brown */
+  background: #8A6E5A; /* Lighter warm brown for a friendlier look */
   padding: 1rem;
   border-radius: 8px;
-  color: #FFFFFF;      /* white text */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);  /* slight shadow for better legibility */
+  color: #FFFFFF;      /* Ensure text is white */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle shadow for text clarity */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);       /* Pronounced shadow for depth */
 }
 
 /* Gallery */
@@ -177,12 +178,13 @@ background-color: #748C69;  /* Updated to moss green */
   gap: 1rem;
 }
 .testimonial-card {
-  background: #4D3E3E; /* matching dark warm brown */
+  background: #8A6E5A; /* Use the same lighter warm brown for consistency */
   padding: 1.25rem;
   border-radius: 8px;
-  border-left: 4px solid #748C69; /* moss green accent */
-  color: #FFFFFF;      /* white text */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  border-left: 4px solid #748C69; /* Moss green accent */
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 .testimonial-card .stars {
   color: #d4a017;
@@ -210,8 +212,9 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.875rem;
-  color: #F5F5F5; /* off-white for readability */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  color: #F5F5F5; /* Keep this for readability */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+  background: #7D5A4E; /* Optionally, set a background similar to your global color */
 }
 /* Responsive */
 @media (min-width: 768px) {
