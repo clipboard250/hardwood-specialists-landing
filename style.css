@@ -2,6 +2,12 @@
 * {
   box-sizing: border-box;
 }
+.container {
+  max-width: 960px;  /* Sets a consistent width for all sections */
+  margin: 0 auto;    /* Centers the container horizontally */
+  padding: 0 1rem;   /* Provides side padding for breathing room */
+}
+
 
 /* Prevent horizontal bleed on mobile and set up base styles */
 html, body {
