@@ -8,15 +8,14 @@
   padding: 0 1rem;   /* Provides side padding for breathing room */
 }
 
-
 /* Prevent horizontal bleed on mobile and set up base styles */
 html, body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
   font-family: 'Inter', sans-serif;
-  background-color: #fdf8ef;
-  color: #222;
+  background-color: #3B2F2F;  /* dark warm brown background */
+  color: #F5F5F5;             /* off-white text for contrast */
 }
 
 h1, h2 {
