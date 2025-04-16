@@ -112,9 +112,11 @@ background-color: #748C69;  /* Updated to moss green */
   margin-top: 1.5rem;
 }
 .service-card {
-  background: #f8f3e8;
+  background: #4D3E3E; /* dark warm brown */
   padding: 1rem;
   border-radius: 8px;
+  color: #FFFFFF;      /* white text */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);  /* slight shadow for better legibility */
 }
 
 /* Gallery */
@@ -175,10 +177,12 @@ background-color: #748C69;  /* Updated to moss green */
   gap: 1rem;
 }
 .testimonial-card {
-  background: #fefefe;
+  background: #4D3E3E; /* matching dark warm brown */
   padding: 1.25rem;
   border-radius: 8px;
-  border-left: 4px solid #d4a017;
+  border-left: 4px solid #748C69; /* moss green accent */
+  color: #FFFFFF;      /* white text */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 .testimonial-card .stars {
   color: #d4a017;
@@ -206,7 +210,8 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.875rem;
-  color: #F5F5F5;  /* Bright off-white for readability */
+  color: #F5F5F5; /* off-white for readability */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 /* Responsive */
 @media (min-width: 768px) {
@@ -216,5 +221,10 @@ footer {
   .service-list {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Global paragraph text shadow */
+p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
 
