@@ -67,7 +67,7 @@ a:hover {
 .hero-btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #d4a017;
+background-color: #748C69;  /* Updated to moss green */
   color: white;
   font-weight: 600;
   border-radius: 6px;
@@ -80,7 +80,7 @@ a:hover {
   text-align: center;
   font-size: 0.875rem;
   color: #fff;
-  background-color: #d4a017;
+background-color: #748C69;  /* Updated to moss green */
   padding: 0.5rem 1rem;
 }
 
