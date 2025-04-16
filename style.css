@@ -26,9 +26,11 @@ a:hover {
 }
 
 /* Hero */
-.hero {
-  background: url('images/wood-grain-samples.jpg') center/cover no-repeat;
-  height: 100vh;
+.hero { 
+ background: url('images/wood-grain-samples.jpg') center/cover no-repeat;
+  /* height: 100vh;  <-- remove or comment this out */
+  padding: 4rem 1rem;
+  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
