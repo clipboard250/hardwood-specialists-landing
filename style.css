@@ -93,13 +93,13 @@ background-color: #748C69;  /* Updated to moss green */
 }
 
 .card {
-  background: #4D3E3E;  /* Dark warm brown */
+  background: #6C584C;  /* Lighter warm mocha tone */
   margin: 2rem auto;
   padding: 2rem;
   max-width: 960px;
   border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  color: #FFFFFF;       /* Ensures text inside is white */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: #FFFFFF;       /* Ensure text is white */
 }
 .card h2 {
   font-size: 1.5rem;
@@ -117,12 +117,12 @@ background-color: #748C69;  /* Updated to moss green */
   margin-top: 1.5rem;
 }
 .service-card {
-  background: #8A6E5A; /* Lighter warm brown for a friendlier look */
+  background: #6C584C;  /* using the same lighter mocha for consistency */
   padding: 1rem;
   border-radius: 8px;
-  color: #FFFFFF;      /* Ensure text is white */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Subtle shadow for text clarity */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);       /* Pronounced shadow for depth */
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 /* Gallery */
@@ -160,7 +160,7 @@ background-color: #748C69;  /* Updated to moss green */
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   font-size: 0.9rem;
-  text-align: center;
+text-align: center;
   padding: 0.3rem 0;
   font-family: 'Inter', sans-serif;
 }
@@ -183,13 +183,15 @@ background-color: #748C69;  /* Updated to moss green */
   gap: 1rem;
 }
 .testimonial-card {
-  background: #8A6E5A; /* Use the same lighter warm brown for consistency */
+  background: #6C584C;
   padding: 1.25rem;
   border-radius: 8px;
-  border-left: 4px solid #748C69; /* Moss green accent */
+  border-left: 4px solid #748C69;  /* moss green accent */
   color: #FFFFFF;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
 }
 .testimonial-card .stars {
   color: #d4a017;
@@ -217,10 +219,11 @@ footer {
   text-align: center;
   padding: 2rem;
   font-size: 0.875rem;
-  color: #F5F5F5; /* Keep this for readability */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
-  background: #7D5A4E; /* Optionally, set a background similar to your global color */
+  color: #FFFFFF;           /* white text */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  background: #7D5A4E;       /* a slightly richer mocha background */
 }
+
 /* Responsive */
 @media (min-width: 768px) {
   .testimonial-grid {
@@ -235,4 +238,12 @@ footer {
 p {
   text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
 }
+/* Global Headings */
+h2 {
+  text-align: center;
+  color: #FFFFFF;       /* pure white for maximum contrast */
+  margin: 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
 
