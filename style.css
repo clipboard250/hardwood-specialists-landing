@@ -22,6 +22,11 @@ html, body {
 h1, h2 {
   font-family: 'Montserrat', sans-serif;
 }
+h2 {
+  text-align: center;
+  color: #F5F5F5;       /* bright off-white for readability */
+  margin: 1rem 0;
+}
 
 a {
   color: #d4a017;
