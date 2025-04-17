@@ -1,0 +1,265 @@
+/* Ensure all elements include padding and border in their size */
+* {
+  box-sizing: border-box;
+}
+.container {
+  max-width: 960px;  /* Sets a consistent width for all sections */
+  margin: 0 auto;    /* Centers the container horizontally */
+  padding: 0 1rem;   /* Provides side padding for breathing room */
+}
+
+/* Prevent horizontal bleed on mobile and set up base styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Inter', sans-serif;
+  background-color: #7D5A4E; /* Lighter mocha-brown inspired by nature */
+  color: #FFFFFF;           /* White text for better contrast */
+}
+}
+
+h1, h2 {
+  font-family: 'Montserrat', sans-serif;
+}
+h2 {
+  text-align: center;
+  color: #FFFFFF;    /* bright white for high contrast */
+  margin: 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+a {
+  color: #d4a017;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Hero */
+.hero { 
+ background: url('images/wood-grain-samples.jpg') center/cover no-repeat;
+  /* height: 100vh;  <-- remove or comment this out */
+  padding: 4rem 1rem;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75); /* increased opacity for better contrast */
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+.hero-title {
+  font-size: 3.5rem;
+  margin: 0 0 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.hero-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+background-color: #748C69;  /* Updated to moss green */
+  color: white;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: transform 0.2s ease;
+}
+.hero-btn:hover {
+  transform: scale(1.05);
+}
+.license-stamp {
+  text-align: center;
+  font-size: 1rem;        /* a bit larger */
+  font-weight: bold;
+  color: #FFFFFF;
+  background-color: #748C69;  /* moss green accent */
+  padding: 0.75rem 1rem;
+  margin: 1rem auto;
+  max-width: 300px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+.card {
+  background: #6C584C;  /* Lighter warm mocha tone */
+  margin: 2rem auto;
+  padding: 2rem;
+  max-width: 960px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: #FFFFFF;       /* Ensure text is white */
+}
+.card h2 {
+  font-size: 1.5rem;
+  color: #5e420d;
+}
+.footer-note {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+/* Services */
+.service-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.service-card {
+  background: #6C584C;  /* using the same lighter mocha for consistency */
+  padding: 1rem;
+  border-radius: 8px;
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  background: #4D3E3E;  /* Same dark warm brown as cards */
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.03);
+}
+
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;
+  display: block;
+}
+/* Center the gallery labels */
+.gallery-item span,
+.img-label {
+  display: block;
+  text-align: center;
+  padding: 0.5rem 0;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.img-label {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.9rem;
+text-align: center;
+  padding: 0.3rem 0;
+  font-family: 'Inter', sans-serif;
+}
+
+@media (min-width: 1024px) {
+  .gallery-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  /* Keep the gallery content from bleeding off the screen on desktop */
+  #gallery {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+}
+
+/* Testimonials */
+.testimonial-grid {
+  display: grid;
+  gap: 1rem;
+}
+.testimonial-card {
+  background: #6C584C;
+  padding: 1.25rem;
+  border-radius: 8px;
+  border-left: 4px solid #748C69;  /* moss green accent */
+  color: #FFFFFF;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+}
+.testimonial-card .stars {
+  color: #d4a017;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+.testimonial-card footer {
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-style: normal;      /* remove italics if they feel odd */
+  text-align: center;      /* center aligns the names */
+  color: #FFFFFF;
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+}
+.cta a {
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.875rem;
+  color: #FFFFFF;           /* white text */
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+  background: #7D5A4E;       /* a slightly richer mocha background */
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .service-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Global paragraph text shadow */
+p {
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+}
+/* Global Headings */
+h2 {
+  text-align: center;
+  color: #FFFFFF;       /* pure white for maximum contrast */
+  margin: 1rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
